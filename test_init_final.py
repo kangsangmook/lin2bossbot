@@ -1229,7 +1229,7 @@ while True:
 							)
 				else :
 					embed = discord.Embed(
-							description= '등록된 공지가 없습니다.',
+							description= '```등록된 공지가 없습니다.```',
 							color=0xff00ff
 							)
 				await ctx.send(embed=embed, tts=False)
@@ -1313,7 +1313,7 @@ while True:
 							)
 				else :
 					embed = discord.Embed(
-							description= '등록된 킬 목록이 없습니다. 분발하세요!',
+							description= '```등록된 킬 목록이 없습니다. 분발하세요!```',
 							color=0xff00ff
 							)
 				await ctx.send(embed=embed, tts=False)
@@ -1363,10 +1363,10 @@ while True:
 			racing_member = msg.split(" ")
 
 			if len(racing_member) == 1:
-				await ctx.send('레이스 인원이 1명 입니다.')
+				await ctx.send('```레이스 인원이 1명 입니다.```')
 				return
 			elif len(racing_member) >= 13:
-				await ctx.send('레이스 인원이 12명 초과입니다.')
+				await ctx.send('```레이스 인원이 12명 초과입니다.```')
 				return
 			else :
 				race_val = random.sample(range(14, 14+len(racing_member)), len(racing_member))
@@ -2337,7 +2337,7 @@ while True:
 					if message.content.startswith(command15.strip() + ' '):
 						tmp_sayMessage = message.content
 						sayMessage = tmp_sayMessage[len(command15.strip())+1:]
-						await MakeSound(message.author.display_name +'님이.' + sayMessage, './sound/say')
+						await MakeSound(message.author.display_name +'님이, ' + sayMessage, './sound/say')
 						await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
 						await PlaySound(voice_client1, './sound/say.wav')
 
@@ -2477,3 +2477,4 @@ while True:
 
 	print("Bot restarting")
 	client = discord.Client(loop=client.loop)
+	client = commands.Bot(command_prefix=commands.when_mentioned_or(""), description='일상디코봇')
