@@ -1,0 +1,38 @@
+설치법
+
+1. 깃헙에 
+requirements.txt
+test_init_final.py
+test_setting.ini
+
+파일 3개 업로드
+
+2. 헤로쿠
+config Val에
+
+key값         value
+
+NAVER_ID     네이버아이디입력
+NAVER_PW     네이버비밀번호입력
+
+2개 추가
+
+아라: 3674243
+아라기쁨: 3674668
+다인: 3674246
+지훈: 3675024
+
+1. 크롬브라우저접속
+2. 클로버더빙 접속
+3. 원하는 목소리 선택
+4. F12 눌러서 소스창(?) 열리면 맨위 network 선택 두줄아래 media 선택
+5. 미리듣기 클릭
+6. F12 소스창에 출력되는 값에서 목소리번호(7자리 숫자) 따기
+7. test_setting.ini 파일 하단에 voicetype에 목소리번호(7자리숫자) 입력
+8. 헤로쿠 setting - Reveal Config Vars에
+NAVER_ID / NAVER_PW 추가
+
+
+*주의사항.
+해외IP로그인 시도 OFF 하셔야 동작함.
+약간의 위험성이 있으니.. 세컨아이디 사용 추천dream
